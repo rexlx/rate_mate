@@ -1,7 +1,7 @@
 # rate_mate
 create the xml needed for some basic html testing with tsung
 
-```bash
+```
 rexfitzhugh scripts $ python rate_mate.py 25 50 5
   <arrivalphase phase="1" duration="10" unit="minute">
     <users interarrival="0.0400" unit="second"></users>
