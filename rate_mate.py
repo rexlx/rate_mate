@@ -1,22 +1,15 @@
 #!/usr/bin/python
-import sys, argparse
-
-def msg():
-    """
-    this function replaces the default usage message for argparser
-    as it is misleading in this case
-    """
-    return """requires three args
-    $ ./rate_mate.py START STOP STEP [-p] [-h]
-    """
+import sys
+import argparse
 
 def get_args():
     """
-    this function collects three mandatory postional args and one
+    this function collects three mandatory postional args and two
     optional.
     """
+    msg = "$ ./rate_mate.py START STOP STEP [-p] [-h]"
     # create an instance of ArgumentParser named parser
-    parser = argparse.ArgumentParser(usage=msg())
+    parser = argparse.ArgumentParser(usage=msg)
     # add the three mandatory positional args
     parser.add_argument("start", type=float, help="start rate")
     parser.add_argument("stop", type=float, help="final rate")
